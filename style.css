@@ -1,0 +1,255 @@
+.minecraft-recipe {
+    background-color: #C6C6C6;
+    display: inline-block;
+    border: 2px solid;
+    border-color: #DBDBDB #5B5B5B #5B5B5B #DBDBDB;
+    padding: 6px;
+}
+
+.minecraft-recipe .crafting {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.minecraft-recipe .recipe {
+    display: flex;
+}
+
+.minecraft-recipe .table-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 36px);
+    grid-template-rows: repeat(3, 36px);
+    width: 108px;
+    height: 108px;
+    gap: 0;
+}
+
+.minecraft-recipe .grid,
+.minecraft-recipe .grid-large {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    background-color: #8B8B8B;
+    border: 2px solid;
+    border-top-color: #373737;
+    border-right-color: #FFF;
+    border-bottom-color: #FFF;
+    border-left-color: #373737;
+}
+
+.minecraft-recipe .grid {
+    width: 32px;
+    height: 32px;
+}
+
+.minecraft-recipe .grid-large {
+    width: 42px;    /* Slightly larger for output slot */
+    height: 42px;
+    position: relative;
+}
+
+.minecraft-recipe .crafting-table-output {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minecraft-recipe .arrow {
+    width: 32px;
+    height: 26px;
+    margin-left: 16px;
+    margin-right: 16px;
+    background-size: cover;
+    background-image: url('images/layout/arrow.png');
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
+
+.minecraft-recipe .item-cycle {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minecraft-recipe .item-cycle .cycle-item {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    image-rendering: pixelated;
+    object-fit: contain;
+}
+
+.minecraft-recipe .grid-large .item-cycle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+}
+
+.minecraft-recipe .grid-large .cycle-item {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    image-rendering: pixelated;
+    object-fit: contain;
+}
+
+.minecraft-recipe.smelting {
+    display: inline-block;
+    background-color: #C6C6C6;
+    border: 2px solid;
+    border-color: #DBDBDB #5B5B5B #5B5B5B #DBDBDB;
+    padding: 6px;
+    width: fit-content;
+}
+
+.minecraft-recipe.smelting .smelting-layout {
+    position: relative;
+    display: inline-block;
+    height: 108px;
+    width: 126px; 
+}
+
+.minecraft-recipe.smelting .input {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.minecraft-recipe.smelting .fire {
+    position: absolute;
+    top: 36px;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background-image: url('images/layout/fire.png');
+    background-size: contain;
+    image-rendering: pixelated;
+}
+
+.minecraft-recipe.smelting .fuel {
+    position: absolute;
+    top: 72px;
+    left: 0;
+}
+
+.minecraft-recipe.smelting .arrow {
+    position: absolute;
+    top: 41px;  /* 36px (output position) + (42px - 26px)/2 to center with output slot */
+    left: 42px;
+    width: 32px;
+    height: 26px;
+    background-image: url('images/layout/arrow.png');
+    background-size: contain;
+    image-rendering: pixelated;
+}
+
+.minecraft-recipe.smelting .output {
+    position: absolute;
+    top: 36px;
+    left: 84px;
+}
+
+/* Remove any potential margins */
+.minecraft-recipe.smelting .input,
+.minecraft-recipe.smelting .fire,
+.minecraft-recipe.smelting .fuel,
+.minecraft-recipe.smelting .arrow,
+.minecraft-recipe.smelting .output {
+    margin: 0;
+    padding: 0;
+}
+
+/* brewing */
+.minecraft-recipe.brewing {
+    background-color: #C6C6C6;
+    display: inline-block;
+    border: 2px solid;
+    border-color: #DBDBDB #5B5B5B #5B5B5B #DBDBDB;
+    padding: 6px;
+}
+
+.minecraft-recipe.brewing .brewing-layout {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 100px;
+}
+
+/* Background elements */
+.minecraft-recipe.brewing .bubbles {
+    position: absolute;
+    top: -2px;
+    left: 18px;
+    width: 24px;
+    height: 57px;
+    background-image: url('images/layout/bubbles.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.minecraft-recipe.brewing .vertical-arrow {
+    position: absolute;
+    top: -4px;
+    left: 75px;
+    width: 24px;
+    height: 57px;
+    background-image: url('images/layout/arrow_down.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.minecraft-recipe.brewing .pipes {
+    position: absolute;
+    top: 34px;
+    left: 30px;
+    width: 60px;
+    height: 40px;
+    background-image: url('images/layout/pipes.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* brewing - item slots */
+.minecraft-recipe.brewing .reagent {
+    position: absolute;
+    top: 0;
+    left: 42px;
+    z-index: 2;
+}
+
+.minecraft-recipe.brewing .potion-1,
+.minecraft-recipe.brewing .potion-2,
+.minecraft-recipe.brewing .potion-3 {
+    position: absolute;
+    top: 84px;
+    z-index: 2;
+}
+
+.minecraft-recipe.brewing .potion-1 { left: 0; top: 58px; }
+.minecraft-recipe.brewing .potion-2 { 
+    left: 42px;
+    top: 72px;
+}
+.minecraft-recipe.brewing .potion-3 { left: 84px; top: 58px; }

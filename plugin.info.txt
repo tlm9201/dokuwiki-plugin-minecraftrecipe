@@ -1,0 +1,7 @@
+base   minecraftrecipe
+author tlm920
+email  tlm920@proton.me
+date   2024-02-06
+name   Minecraft Recipe Plugin
+desc   Renders Minecraft recipes on your wiki
+url    https://www.dokuwiki.org/plugin:minecraftrecipe
