@@ -5,7 +5,7 @@
 <div align="center"><h1>minecraftrecipe</h1></div>
 
 <div align="center">
-A Dokuwiki plugin to render minecraft recipe previews on your wikis. Useful for modders, servers, and other blockgame enthusiasts. 
+A DokuWiki plugin to render minecraft recipe previews on your wikis. Useful for modders, servers, and other blockgame enthusiasts. 
 </div>
 <br></br>
 
@@ -79,8 +79,8 @@ diamond diamond diamond
 </recipe>
 ```
 
-> ![NOTE]
-> If the specified item id cannot be found, it will fallback to minecraft.wiki and attempt to lookup the sprite there. Assets on minecraft.wiki are case sensitive.
+![NOTE]
+If the specified item id cannot be found, it will fallback to minecraft.wiki and attempt to lookup the sprite there. Assets on minecraft.wiki are case sensitive.
 
 ## Item Groups
 Groups of items are declared using commas.
@@ -99,7 +99,6 @@ Oak_Planks,Spruce_Planks,Birch_Planks Oak_Planks,Spruce_Planks,Birch_Planks Oak_
 Output:
 
 <img src="local/group-prev.gif" width = 250 height = 125 />
-<br></br>
 
 # License
 ```
