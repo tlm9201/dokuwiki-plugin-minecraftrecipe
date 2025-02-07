@@ -79,8 +79,7 @@ diamond diamond diamond
 </recipe>
 ```
 
-![NOTE]
-If the specified item id cannot be found, it will fallback to minecraft.wiki and attempt to lookup the sprite there. Assets on minecraft.wiki are case sensitive.
+> Note that if the specified item id cannot be found, it will fallback to minecraft.wiki and attempt to lookup the sprite there. Assets on minecraft.wiki are case sensitive.
 
 ## Item Groups
 Groups of items are declared using commas.
